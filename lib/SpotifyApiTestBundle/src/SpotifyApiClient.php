@@ -1,5 +1,5 @@
 <?php
-namespace App\Service\Client;
+namespace FrcH\SpotifyApiTestBundle;
 
 use \GuzzleHttp\ClientInterface;
 use \GuzzleHttp\Exception\RequestException;

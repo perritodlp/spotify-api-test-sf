@@ -7,4 +7,5 @@ return [
     Twig\Extra\TwigExtraBundle\TwigExtraBundle::class => ['all' => true],
     Symfony\Bundle\MakerBundle\MakerBundle::class => ['dev' => true],
     KnpU\OAuth2ClientBundle\KnpUOAuth2ClientBundle::class => ['all' => true],
+    FrcH\SpotifyApiTestBundle\FrcHSpotifyApiTestBundle::class => ['all' => true],
 ];

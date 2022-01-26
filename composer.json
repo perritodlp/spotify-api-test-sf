@@ -38,6 +38,7 @@
     },
     "autoload": {
         "psr-4": {
+            "FrcH\\SpotifyApiTestBundle\\": "lib/SpotifyApiTestBundle/src",
             "App\\": "src/"
         }
     },
