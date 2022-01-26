@@ -1,7 +1,6 @@
 <?php
 namespace App\Service\Client;
 
-use App\SpotifyApiClientInterface;
 use \GuzzleHttp\ClientInterface;
 use \GuzzleHttp\Exception\RequestException;
 use \GuzzleHttp\Client;
