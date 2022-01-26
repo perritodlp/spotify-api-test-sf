@@ -58,7 +58,7 @@ http://localhost:8000/lanzamientos
 
 - Para los pocos endpoints que se consumían y que no requerían autorización, ya que no consumían datos privados del usuario de Spotify, se hubiese podido utilizar el flujo "Client Credencial Flow", pero se me presentaron inconvenientes al intentar implementarlo y se optó por dejar el mencionado anteriormente.
 
-- El requerimiento indicaba que se debía diseñar un módulo que cumpliera con la documentación ofrecida. En este punto me asaltó la duda (pero no pregunté!! :anguished:), sobre si se refería a un Bundle para poder ser utilizado en otros proyectos o se refería a un bloque de funcionalidades que llevaran a cabo un cometido. Se ejecuta y se entrega como una página, ya que por falta de tiempo quedé en la mitad de la creación del Bundle, debido a que tuve que buscar información sobre cómo hacerlo (Curso de Symfonycast.com). 
+- El requerimiento indicaba que se debía diseñar un módulo que cumpliera con la documentación ofrecida. En este punto me asaltó la duda (pero no pregunté!! :anguished:), sobre si se refería a un Bundle para poder ser utilizado en otros proyectos o se refería a un bloque de funcionalidades que llevaran a cabo un cometido. Se ejecuta y se entrega como una página, ya que por falta de tiempo quedé en la mitad de la creación del Bundle (ver rama bundle en Github https://github.com/perritodlp/spotify-api-test-sf/tree/bundle), debido a que tuve que buscar información sobre cómo hacerlo (Curso de Symfonycast.com). 
 
 - Prefiero entregar lo que podrán observar y no dejar de mostrar mi trabajo.
 
