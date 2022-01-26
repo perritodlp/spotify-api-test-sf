@@ -50,8 +50,8 @@ http://localhost:8000/lanzamientos
 ```
 
 ### :ambulance: Asuntos varios
-```bash
-- Para la autenticación contra la API de Spotify, se usó el método de autorización de Oauth2 llamado "Authorization Code Flow", el cual hará necesario que la primera vez que se ejecute la aplicación, se tenga que ingresar el usuario y la clave de una cuenta gratuita o paga de Spotify. Esto es debido a que tiene acceso a los scopes donde se requiere consultar información privada del usuario. 
+
+- <p style="text-align: justify;">Para la autenticación contra la API de Spotify, se usó el método de autorización de Oauth2 llamado "Authorization Code Flow", el cual hará necesario que la primera vez que se ejecute la aplicación, se tenga que ingresar el usuario y la clave de una cuenta gratuita o paga de Spotify. Esto es debido a que tiene acceso a los scopes donde se requiere consultar información privada del usuario.</p> 
 
 - Para los pocos endpoints que se consumían y que no requerían autorización, ya que no consumían datos privados del usuario de Spotify, se hubiese podido utilizar el flujo "Client Credencial Flow", pero se me presentaron inconvenientes al intentar implementarlo y se optó por dejar el mencionado anteriormente.
 
@@ -60,6 +60,6 @@ http://localhost:8000/lanzamientos
 - Prefiero entregar lo que podrán observar y no dejar de mostrar mi trabajo.
 
 - Se deja comentado la mayor parte del código, para la mejor comprensión del mismo.
-```
+
 
 ### :construction_worker: Espero que todo funcione y gracias por la oportunidad brindada!! :fire: 
