@@ -31,6 +31,9 @@ git clone https://github.com/perritodlp/spotify-api-test-sf.git
 # Cambiarse a la ruta usando la terminal
 cd spotify-api-test-sf
 
+# Crear en la raíz el archivo .env con la información en el correo o copiar el archivo adjunto al correo,
+# ya que proporciona la configuración del aplicativo. 
+
 # Teniendo instalado Composer en el equipo, ejecutar el comando
 composer install
 
