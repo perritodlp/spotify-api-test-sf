@@ -1,20 +1,47 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello GetNewReleasesController!{% endblock %}
+{% block title %}Spotify: Nuevos lanzamientos en Colombia{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/var/www/symfony/src/Controller/GetNewReleasesController.php'|file_link(0) }}">src/Controller/GetNewReleasesController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/var/www/symfony/templates/get_new_releases/index.html.twig'|file_link(0) }}">templates/get_new_releases/index.html.twig</a></code></li>
-    </ul>
+<div id="wrapper">
+    <div class="container">
+        <section class="albums">
+            {% if albums %}
+                {% for album in albums %}
+                    {% for item in album.items %}
+                        <div class="album-card">
+                            <div class="album-image">
+                                <img src="{{ item.images[1].url }}" alt="{{ item.name }}" width="300" height="300">
+                            </div>
+                            <div class="album-info">
+                                <h5>{{ item.name }}</h5>
+                                {% if item.artists %}
+                                    <div class="album-artists">
+                                        {% for artist in item.artists  %}
+                                            <div class="album-artists-link"><a href="#" onclick="openModal('{{ artist.id }}','{{ item.id}}')">{{ artist.name }}</a></div>
+                                        {% endfor %}
+                                    </div>    
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}            
+                {% endfor %}    
+            {% else  %}
+                No hay nuevos lanzamientos
+            {% endif %}            
+        </section> 
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer"></div>
+        </div>
+    </div>
 </div>
 {% endblock %}

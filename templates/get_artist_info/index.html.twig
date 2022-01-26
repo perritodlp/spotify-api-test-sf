@@ -1,0 +1,36 @@
+<div id="modal-body-wrapper">
+    <div class="artist-container">
+        {% if artist %}
+            <section class="artist">
+                <div class="artist-picture">
+                    <img src="{{ artist.images[1].url }}" alt="{{ artist.name }}" width="160" height="160">
+                </div>
+                <div class="artist-info">
+                    <h1>{{ artist.name }}</h1>
+                    <h2><a href="{{ artist.external_urls.spotify }}" target="_blank">Ir a la página del artista</a></h2>
+                </div>
+            </section>
+            <section class="albums-list">
+            {% if albums.items %}
+                <hr />
+                <header>
+                    <div class="col">Foto</div>
+                    <div class="col">Album</div>
+                    <div class="col center">Número de canciones</div>
+                </header>
+                <hr />
+                
+                {% for item in albums.items %}
+                    <div class="row">
+                        <div class="col"><img src="{{ item.images[2].url }}" alt="{{ item.name }}" width="64" height="64"></div>
+                        <div class="col">{{ item.name }}</div>
+                        <div class="col center">{{ item.total_tracks }}</div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="row">No hay álbumes disponibles</div>    
+            {% endif %}
+            </section>
+        {% endif %}
+    </div>
+</div>

@@ -26,8 +26,29 @@
     "guzzlehttp/psr7": {
         "version": "2.1.0"
     },
+    "kerox/oauth2-spotify": {
+        "version": "1.2.0"
+    },
+    "knpuniversity/oauth2-client-bundle": {
+        "version": "2.9",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.20",
+            "ref": "1ff300d8c030f55c99219cc55050b97a695af3f6"
+        },
+        "files": [
+            "config/packages/knpu_oauth2_client.yaml"
+        ]
+    },
+    "league/oauth2-client": {
+        "version": "2.6.1"
+    },
     "nikic/php-parser": {
         "version": "v4.13.2"
+    },
+    "paragonie/random_compat": {
+        "version": "v9.99.100"
     },
     "psr/cache": {
         "version": "1.0.1"
@@ -64,6 +85,9 @@
         "files": [
             "config/packages/sensio_framework_extra.yaml"
         ]
+    },
+    "symfony/asset": {
+        "version": "v5.4.0"
     },
     "symfony/cache": {
         "version": "v5.4.2"

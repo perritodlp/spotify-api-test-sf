@@ -1,0 +1,238 @@
+/*------------------------------------*\
+    Estilos principales
+\*------------------------------------*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+
+body {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1240px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f6f6f6;
+}
+
+/* Tipografía */
+
+h1 {
+    font-size: 28px;
+    font-weight: 300;
+    flex: 1;
+}
+
+h5 {
+    font-weight: 500;
+    line-height: 1.7em;
+}
+
+h6 {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Album Layout */
+
+.album-filter {
+    display: flex;
+    padding: 30px 0;
+}
+
+label {
+    color: #666;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 2em;
+    text-transform: uppercase;
+}
+
+.albums {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.album-card {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 2%;
+    flex: 1 29%;
+    
+    background-color: #FFF;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.25);
+}
+
+.album-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.album-info {
+    margin-top: auto;
+    padding-top: 20px;
+    text-align: left;
+}
+
+.album-artists {
+    display: flex;
+    flex-wrap: wrap;        
+}
+
+.album-artists-link {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    flex: 1 auto;
+    align-items: flex-start;
+    align-items: baseline;        
+}
+
+.album-artists-link a {
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: #18bda6;
+    color: #FFF;
+    padding: 2px 6px 2px 6px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+@media ( max-width: 920px ) {
+    .album-card {
+        flex: 1 21%;
+    }
+    
+    .albums .album-card:first-child, 
+    .albums .album-card:nth-child(2) {
+        flex: 2 46%;
+    }
+}
+
+@media ( max-width: 600px ) {
+    .album-card {
+        flex: 1 46%;
+    }
+}
+
+@media ( max-width: 480px ) {
+    h1 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+/*------------------------------------*\
+    Estilos para la Modal
+\*------------------------------------*/
+
+/* La Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 20px;
+}
+
+/* El botón para cerrar la modal */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Header de la modal */
+.modal-header {
+    padding: 2px 16px;
+    background-color: #fff;
+    color: white;
+}
+
+/* Cuerpo de la modal */
+.modal-body {
+    padding: 2px 16px;
+}
+
+/* Pie de la modal */
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #fff;
+    color: white;
+}
+
+/* Contenido de la modal */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+/* Estilos del contenido de la modal  */
+.artist-container {
+    width: 90%;
+    margin: 25px auto;        
+}
+.artist-container .artist {
+    display: flex;
+}
+.artist-container .artist .artist-picture {
+    margin: 20px;
+}
+.artist-container .artist .artist-info {
+    margin: 20px;
+} 
+.artist-container .artist .artist-info h2 {
+    margin-top: 10px;
+}       
+.artist-container .artist .artist-picture img {
+    border-radius: 50%;
+}
+.artist-container .album-list {
+    margin: 20px;
+}
+.artist-container header, .row {
+    display: flex;  /* Alinea todos los elementos hijos (flex items) en una fila */
+    padding: 5px;
+}
+.artist-container .col {
+    flex: 1;        /* distribuye el espacio en la línea por igual entre los elementos */
+    margin: auto auto;
+}  
+.artist-container .center {
+    text-align: center;
+} 
+@media ( max-width: 480px ) {
+    .artist-container .col:nth-child(3) {
+        display: none;
+    }
+    .artist-container .artist {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }    
+} 
